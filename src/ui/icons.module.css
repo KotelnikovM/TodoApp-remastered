@@ -1,0 +1,19 @@
+.checkIcon,
+.deleteIcon {
+  fill: #9e78cf;
+}
+
+.checkIcon:hover,
+.deleteIcon:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: all 0.1s ease-in-out;
+}
+
+.checkIcon:hover {
+  fill: #5ffe5f;
+}
+
+.deleteIcon:hover {
+  fill: #ff5f5f;
+}
