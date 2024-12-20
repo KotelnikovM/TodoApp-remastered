@@ -1,10 +1,12 @@
 .checkIcon,
-.deleteIcon {
+.deleteIcon,
+.editIcon {
   fill: #9e78cf;
 }
 
 .checkIcon:hover,
-.deleteIcon:hover {
+.deleteIcon:hover,
+.editIcon:hover {
   cursor: pointer;
   transform: scale(1.2);
   transition: all 0.1s ease-in-out;
@@ -20,4 +22,13 @@
 
 .addIcon {
   fill: #ffffff;
+}
+
+.editIcon {
+  fill: #9e78cf;
+}
+
+.editIcon:hover {
+  fill: #e8f072;
+  border: #e8f072;
 }
