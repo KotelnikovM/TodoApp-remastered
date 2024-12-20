@@ -1,0 +1,17 @@
+.todoItem {
+  width: 100%;
+  background-color: #15101c;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 22px 20px;
+  display: flex;
+  align-items: center;
+  color: #9e78cf;
+  gap: 8px;
+}
+
+.todoItem p {
+  margin: 0;
+  padding: 0;
+  margin-right: auto;
+}
