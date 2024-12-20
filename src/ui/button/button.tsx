@@ -5,8 +5,12 @@ interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   icon?: React.ReactNode;
 }
 
-const Button: React.FC<IButtonProps> = ({ icon }) => {
-  return <button className={styles.button}>{icon}</button>;
+const Button: React.FC<IButtonProps> = ({ icon, ...props }) => {
+  return (
+    <button className={styles.button} {...props}>
+      {icon}
+    </button>
+  );
 };
 
 export default Button;
