@@ -1,12 +1,18 @@
 .container {
   width: 583px;
-  height: 758px;
+  max-height: 758px;
+  /* display: flex;
+  flex-direction: column; */
   background-color: #1d1825;
   border-radius: 20px;
   padding: 65px 50px;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
+.container:last-child {
+  flex: 1;
+}
 .container p {
   display: flex;
   align-items: start;
