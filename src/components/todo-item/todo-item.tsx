@@ -6,13 +6,13 @@ import styles from './todo-item.module.css';
 
 const TodoItem = () => {
   return (
-    <div className={styles.todoItem}>
+    <li className={styles.todoItem}>
       <p>Text</p>
 
       <Button icon={<CheckIcon />} />
       <Button icon={<DeleteIcon />} />
       <Button icon={<EditIcon />} />
-    </div>
+    </li>
   );
 };
 
