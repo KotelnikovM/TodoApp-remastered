@@ -6,3 +6,8 @@
   padding: 65px 50px;
   box-sizing: border-box;
 }
+
+.container p {
+  display: flex;
+  align-items: start;
+}
