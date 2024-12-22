@@ -2,12 +2,17 @@ import TodoItem from '../todo-item/todo-item';
 import styles from './todo-list.module.css';
 
 interface ITodoListProps {
-  todos: { id: string; todoText: string; completed: boolean }[];
+  todos: todoItemDataI[];
   completed?: boolean;
 }
-const TodoList: React.FC<ITodoListProps> = ({ todos, completed }) => {
-  // const todos = useSelector((state: RootState) => state.todo.todosData);
 
+interface todoItemDataI {
+  id: string;
+  todoText: string;
+  completed: boolean;
+}
+
+const TodoList: React.FC<ITodoListProps> = ({ todos, completed }) => {
   return (
     <ul
       className={`${styles.todoList} ${completed && styles.completedTodoList}`}

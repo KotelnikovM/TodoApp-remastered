@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from 'react';
 import Button from '../../ui/button/button';
 import { AddIcon } from '../../ui/icons/add-icon';
@@ -12,11 +11,12 @@ const TodoForm = () => {
 
   const dispatch = useAppDispatch();
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setText(e.target.value);
-    dispatch(addTodo({ id: uuid(), todoText: text, completed: false }));
-    setText('');
+    if (text.trim()) {
+      dispatch(addTodo({ id: uuid(), todoText: text, completed: false }));
+      setText('');
+    }
   };
 
   return (

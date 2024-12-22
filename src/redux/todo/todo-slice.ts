@@ -1,23 +1,22 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { initialState } from './types';
+import { initialState, initialStateI } from './types';
 
 const todoReducer = createSlice({
-  name: 'todoReducer',
+  name: 'todo',
   initialState,
   reducers: {
-    addTodo: (state, action) => {
+    addTodo: (state: initialStateI, action) => {
       state.todosData.push(action.payload);
     },
-    deleteTodo: (state, action) => {
+    deleteTodo: (state: initialStateI, action) => {
       state.todosData = state.todosData.filter(
         (todo) => todo.id !== action.payload.id
       );
     },
-    completeTodo: (state, action) => {
-      state.todosData.map((todo) => {
+    completeTodo: (state: initialStateI, action) => {
+      state.todosData.forEach((todo) => {
         if (todo.id === action.payload.id) {
           todo.completed = !todo.completed;
-          console.log(todo.completed);
         }
       });
     },
