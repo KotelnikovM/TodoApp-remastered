@@ -3,7 +3,6 @@ import { completeTodo, deleteTodo } from '../../redux/todo/todo-slice';
 import Button from '../../ui/button/button';
 import { CheckIcon } from '../../ui/icons/check-icon';
 import { DeleteIcon } from '../../ui/icons/delete-icon';
-// import { EditIcon } from '../../ui/icons/edit-icon';
 import styles from './todo-item.module.css';
 
 interface ITodoItemProps {
@@ -14,14 +13,6 @@ interface ITodoItemProps {
 
 const TodoItem: React.FC<ITodoItemProps> = ({ text, id, completed }) => {
   const dispatch = useAppDispatch();
-
-  // const handleDelete = () => {
-  //   dispatch(deleteTodo({ id }));
-  // };
-
-  // const handleComplete = () => {
-  //   dispatch(completeTodo({ id }));
-  // };
 
   return (
     <li className={styles.todoItem}>
@@ -41,7 +32,6 @@ const TodoItem: React.FC<ITodoItemProps> = ({ text, id, completed }) => {
             }}
             icon={<DeleteIcon />}
           />
-          {/* <Button icon={<EditIcon />} /> */}
         </>
       )}
     </li>
