@@ -1,18 +1,5 @@
 export const initialState: initialStateI = {
-  // todosData: [
-  //   {
-  //     id: null,
-  //     todoText: '',
-  //     completed: false,
-  //   },
-  // ],
-  todosData: [
-    {
-      id: 12,
-      todoText: 'Test',
-      completed: true,
-    },
-  ],
+  todosData: [],
 };
 
 export interface initialStateI {
@@ -20,7 +7,7 @@ export interface initialStateI {
 }
 
 interface todoItemDataI {
-  id: number | null;
+  id: string;
   todoText: string;
   completed: boolean;
 }

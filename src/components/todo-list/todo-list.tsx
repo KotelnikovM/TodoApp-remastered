@@ -1,14 +1,25 @@
 import TodoItem from '../todo-item/todo-item';
 import styles from './todo-list.module.css';
 
-const TodoList = () => {
+interface ITodoListProps {
+  todos: { id: string; todoText: string; completed: boolean }[];
+  completed?: boolean;
+}
+const TodoList: React.FC<ITodoListProps> = ({ todos, completed }) => {
+  // const todos = useSelector((state: RootState) => state.todo.todosData);
+
   return (
-    <ul className={styles.todoList}>
-      <TodoItem />
-      <TodoItem />
-      <TodoItem />
-      <TodoItem />
-      <TodoItem />
+    <ul
+      className={`${styles.todoList} ${completed && styles.completedTodoList}`}
+    >
+      {todos.map((todo) => (
+        <TodoItem
+          key={todo.id}
+          text={todo.todoText}
+          id={todo.id}
+          completed={todo.completed}
+        />
+      ))}
     </ul>
   );
 };
